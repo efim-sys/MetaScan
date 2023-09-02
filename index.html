@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="JsBarcode.js"></script>
+		<meta charset="UTF-8">
+	</head>
+	<body style="font-family: 'Ubuntu Mono'">
+		<div id="main_div">
+			<center>
+			<div id="controls">
+				<label for="name">Трек-номер</label>
+				<input type="text" id="code" name="code">
+				<br>
+				<label for="bar_type">Тип штрих-кода</label>
+				<select name="bar_type" id="bar_type">
+				    <option value="code128">Code 128 (Aliexpress Китай, Ozon)</option>
+				    <option value="ITF">ITF (Почта России местная)</option>
+				</select>
+				<br>
+				<label for="logo_type">Логотип</label>
+				<select name="logo_type" id="logo_type">
+				    <option value="post-ru-logo.webp">Почта России</option>
+				    <option value="aliexpress-logo.webp">AliExpress</option>
+				    <option value="ozon-logo.webp">Ozon</option>
+				</select>
+				<br>
+				<button onclick="draw()">Обновить</button>
+				<button onclick="printCanvas()">Напечатать</button>
+			</div>
+			
+			<br>
+			<canvas id="result" width="3000" height="357" style="width: 1000px; height: 120px; border: 2px dotted gray"></canvas>
+			</center>
+		</div>
+	</body>
+	
+	<script src="main.js"></script>
+</html>
