@@ -29,7 +29,7 @@ function draw() {
 
 function printCanvas() {
 	let win=window.open();
-	win.document.write("<br><img src='"+c.toDataURL()+"'/>");
+	win.document.write("<br><img style='width: 1000; height: 120' src='"+c.toDataURL()+"'/>");
 	win.print();
 	win.location.reload();
 }
@@ -48,20 +48,18 @@ barcode.addEventListener("load", function() {
 	let text_left = text_limit_left + (text_area - text_width) / 2
 	ctx.fillStyle = "gray"
 	ctx.font = font_size + "px Ubuntu Mono"
-	ctx.fillText(code, text_left, 225)
+	ctx.fillText(code, text_left, c.height/2+font_size/4)
 })
 
 
 logo.addEventListener("load", draw)
 code_input.addEventListener("change", function() {
-	
 	code = code_input.value
 	draw()
 })
 type_input.addEventListener("change", function() {
 	
 	bar_type = type_input.value
-	console.log("bar type change: "+bar_type)
 	draw()
 })
 logo_input.addEventListener("change", function() {
