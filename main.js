@@ -29,7 +29,7 @@ function draw() {
 
 function printCanvas() {
 	let win=window.open()
-	win.document.write("<br><img style='width: 1000; height: 120' src='"+c.toDataURL()+"'/>")
+	win.document.write("<img style='width: 1000; height: 120' src='"+c.toDataURL()+"'/>")
 	win.print()
 	win.location.reload()
 }
